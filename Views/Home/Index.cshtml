@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<EtecShop.Models.Product>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
-
+<link rel="stylesheet" href="index.css">
 <div class="text-center mb-3">
     <h1 class="display-4">Etec Shop</h1>
     <p>Os Melhores Produtos para os Melhores Clientes!</p>
@@ -11,17 +11,18 @@
 <div class="row">
     @foreach (var product in Model)
     {
-        <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="card">
-                <img src="@product.Image" class="card-img-top" alt="@product.Name">
-                <div class="card-body">
-                    <h6 class="card-title">@product.Name</h6>
-                    <p class="card-text">@product.Category.Name - @product.Brand.Name</p>
-                    <h5 class="text-success">R$ @product.Price</h5>
-                    <a href="#" class="btn btn-danger">Comprar</a>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img src="@product.Image" class="card-img-top" alt="@product.Name">
+                    <div class="card-body">
+                        <h6 class="card-title">@product.Name</h6>
+                        <p class="card-text">@product.Category.Name - @product.Brand.Name</p>
+                        <h5 class="text-primary">R$ @product.Price</h5>
+                        <a href="#" class="btn btn-dark">Comprar</a>
+                    </div>
                 </div>
             </div>
-        </div>
     }
 
 </div>
